@@ -1,0 +1,20 @@
+{
+  "name": "admturner/empty",
+  "description": "A WordPress starter theme.",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Adam Turner",
+      "homepage": "https://adamturner.org/",
+      "role": "Developer"
+    }
+  ],
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.x.x",
+    "wp-coding-standards/wpcs": "0.14.0"
+  },
+  "scripts": {
+    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs",
+    "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+  }
+}

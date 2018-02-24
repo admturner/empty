@@ -1,0 +1,436 @@
+/**
+ * A Sass model of all the things you should and shouldn't do in order to comply
+ * with the WordPress CSS coding standards, at:
+ * https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/
+ *
+ * This file should return at least one of all potential errors using the
+ * stylelint config file, at: <url>
+ */
+
+/**
+ * Table of Contents
+ *
+ * 1.0 Comments
+ * 2.0 Structure
+ *     2.1 Indentation
+ *     2.2 Alignment
+ * 3.0 Selectors
+ * 4.0 Properties
+ *     4.1 Property Ordering
+ *     4.2 Vendor Prefixes
+ * 5.0 Values
+ * 6.0 Media Queries
+ */
+
+
+/**
+ * 1.0 Comments
+ *
+ * "Comment, and comment liberally." Break line length at 80 characters, and
+ * consider using a table of contents if your stylesheet is especially long,
+ * using section numbers and headings to help with searching.
+ *
+ * Format comments much as you would PHP comments using PHPDoc:
+ *     - Use block comments for section and subsection headers.
+ *     - Block comments should have newlines before and after.
+ *     - Use inline comments to explain selectors and rules.
+ *     - Inline comments shouldn't have empty newlines separating it from what
+ *     it describes.
+ */
+
+/**
+ * #.# A Section/Subsection heading
+ *
+ * A description of this section/subsection.
+ */
+
+/* An inline comment describing .selector below. */
+.selector {
+    font-size: 16px; /* An inline comment explaining this declaration. */
+}
+
+
+/**
+ * 2.0 Structure
+ *
+ * Structure your CSS more or less however you want, but do structure your CSS.
+ * Prefer high legibility and clear grouping over brevity. Use minification to
+ * achieve performance, and keep your source CSS easily human readable.
+ * Add two blank lines between sections.
+ * Add one blank line between blocks in a section.
+ */
+
+/**
+ * 2.1 Indentation
+ *
+ * Use tabs, not spaces to indent each property.
+ * Don't mix tabs and spaces, and only use one tab per level.
+ * Be mindful of tabs in Sass nesing as well.
+ */
+
+/* Correct */
+.tabs {
+    color: #000;
+
+    .more-tabs {
+        color: #fff;
+    }
+
+}
+
+/* Incorrect */
+.tabs {
+  color: #000;
+      color: #000;
+        color: #000;
+
+        .more-tabs {
+          color: #fff;
+    }
+
+}
+
+/**
+ * 2.2 Alignment
+ *
+ * One selector per line, ending with either a comma or a curly brace.
+ * One property-value pair per line with an ending semicolon.
+ * The closing brace should be flush left, using the same indentation as the
+ * opening selector.
+ */
+
+/* Correct */
+.selector-1,
+.selector-2,
+.selector-3 {
+    background: #fff;
+    color: #000;
+
+    .p,
+    .h6 {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+}
+
+.selector-1 {
+    background: #fff;
+    color: #000;
+}
+
+/* Incorrect */
+.selector-1, .selector-2, .selector-3 {
+    background: #fff;
+    color: #000;
+
+        .p, .h6 {
+            font-size: 1em; font-weight: bold;
+            }
+    }
+.selector-1 { background: #fff; color: #000; }
+
+
+/**
+ * 3.0 Selectors
+ *
+ * Some important reminders from the WP Coding Standards:
+ *
+ *     > "With specificity, comes great responsibility. Broad selectors allow us
+ *     > to be efficient, yet can have adverse consequences if not tested.
+ *     > Location-specific selectors can save us time, but will quickly lead to
+ *     > a cluttered stylesheet."
+ *
+ * Whether you prefer a semantic (yay) or functional CSS approach, or a nice mix
+ * of the two, try to follow these general guidelines when naming selectors:
+ *
+ *     - Use lowercase and separate words with hyphens.
+ *     - Avoid camelcase and underscores.
+ *     - Attribute selectors should use double quotes around values.
+ *     - Use human-readable selectors that describe what element(s) they style.
+ *     - Refrain from using over-qualified selectors.
+ */
+
+/* Correct */
+.comment-form {
+    margin: 0;
+}
+
+input[type="text"] {
+    line-height: 1.1;
+}
+
+/* Incorrect: */
+.commentForm,
+.Comment-Form,
+.comment_form {
+    margin: 0;
+}
+
+/* Should use double quotation marks around value. */
+input[type=text] {
+    line-height: 1.5;
+}
+
+/* Avoid over-qualitification. */
+div.comment_form {
+    margin: 0;
+}
+
+/* Avoid over-qualification via over-nested Sass as well. */
+/* This would resolve to: article section ul.names li a {} */
+article {
+    section {
+        ul.names {
+            li {
+                a {
+                    color: #f00;
+                }
+            }
+        }
+    }
+}
+
+/* What is a c1-xr? Prefer human readable class names. */
+#c1-xr {
+    margin: 0;
+}
+
+
+/*
+ * 4.0 Properties
+ *
+ * As with selectors, try to keep your properties focused on what you need.
+ * Avoid both being too specific or repeating/redundantly declaring styles. Try
+ * to also avoid using fixed dimensions when a fluid solution would work.
+ *
+ *     - Properties should be followed by a colon and a space.
+ *     - All properties should be lowercase, except vendor-specific properties.
+ */
+
+/* Correct: */
+.selector {
+    background: #fff;
+    color: #000;
+    margin: 0;
+    margin-left: 10px;
+}
+
+/* Incorrect: */
+.selector {
+    background:#fff;
+    COLOR: #000;
+    margin-left: 10px;
+    margin: 0; /* Overrides the prior `margin-left`. */
+    display: inline; /* Elements are inline by default unless overridden.
+}
+
+/*
+ * 4.1 Property Ordering
+ *
+ * Order properties however you prefer, but remain consistent. WordPress
+ * suggests grouped ordering, and then alphabetical, in the following order:
+ *     - Display
+ *     - Positioning
+ *     - Box model (border, margin, padding, width)
+ *         - Declaring specific margin/padding use top/right/bottom/left order.
+ *     - Colors
+ *     - Typography
+ *     - Other
+ */
+
+/* Example: */
+.modal {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 40%;
+    background: #eee;
+    color: #ababab;
+    font-family: sans-serif;
+}
+
+/*
+ * 4.2 Vendor Prefixes
+ *
+ * These guidelines, like WordPress core, uses Autoprefixer as a pre-commit tool
+ * to manage browser previxes (@see https://github.com/postcss/autoprefixer).
+ * If you prefer to add prefixes by hand, order them longest (usually -webkit-)
+ * to shortest, always with unprefixed coming last.
+ */
+
+/* Example: */
+.css-fun {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/* To get the above output using autoprefixer, all you'd write is: */
+.css-fun {
+    display: flex;
+    background: linear-gradient(to bottom, white, black);
+    transition: all .5s;
+}
+
+
+/**
+ * 5.0 Values
+ *
+ * As with selectors and properties, we're aiming for consistency. Follow these
+ * guidelines:
+ *
+ *     - Space before the value, after the colon.
+ *     - Do not pad parentheses with spaces (unlike with PHP).
+ *     - Always end with a semicolon.
+ *     - All values should be lowercase, except font names.
+ *     - Use double quotes, and only when needed (like around `content` values).
+ *     - Use hex code for colors, or rgba() if opacity is needed.
+ *     - Shorten values when possible (#fff instead of #ffffff for example).
+ *     - Font weights should be numeric (for example, `400` instead of `normal`
+ *       and `700` instead of `bold`).
+ *     - 0 values shouldn't have units unless required by the property spec.
+ *     - Line-height should be unit-less.
+ *     - Decimal values should have a leading zero, including in rgba().
+ *     - Use shorthand (except when overriding styles) for background, border,
+ *       font, list-style, margin, and padding values.
+ *     - Multiple comma-separated values for one property should be separated by
+ *       either a space or a newline, including within rgba(). Newlines should
+ *       be used for hard-to-read multi-part values (like those for shorthand
+ *       properties like text-shadow). Indent subsequent lines to the same level
+ *       as the selector and space to left-align with the previous value.
+ */
+
+/* Correct: */
+.selector-values {
+    content: "Content";
+    display: block;
+    margin: 0 0 1em 0;
+    background: #fff;
+    color: #000;
+    font-family: "Times New Roman", serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.selector-values-2 {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Prefer shorthand when possible. */
+.use-shorthand {
+    margin-top: 1.5em 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+/* Incorrect: */
+.selector-values {
+    content: 'Content'; /* Use double quotes. */
+    display:block /* Missing space and semicolon. */
+    margin: 0em 0em 1em 0em; /* 0 value shouldn't have units unless required. */
+    background: #ffffff; /* Shorten hex values when possible. */
+    color: BLACK; /* Use lowercase, and use hex codes for color. */
+    font-family: Times New Roman, serif; /* Quote font names when required. */
+    font-weight: bold; /* Font weights should be numeric. */
+    line-height: 1.5em; /* Line-height should be unitless. */
+}
+
+/* Don't pad parentheses, do space values after commas. */
+.selector-values-2 {
+    background-color: rgb( 0,0,0 ); /* Prefer hex for opaque colors. */
+    color: rgba( 255,255,255,.8 ); /* Decimal values should have leading 0. */
+}
+
+/* Prefer shorthand when possible. */
+.use-shorthand {
+    margin-top: 1.5em;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+
+/*
+ * 6.0 Media Queries
+ *
+ * Media Queries #Media Queries
+Media queries allow us to gracefully degrade the DOM for different screen sizes. If you are adding any, be sure to test above and below the break-point you are targeting.
+
+It is generally advisable to keep media queries grouped by media at the bottom of the stylesheet.
+An exception is made for the wp-admin.css file in core, as it is very large and each section essentially represents a stylesheet of its own. Media queries are therefore added at the bottom of sections as applicable.
+Rule sets for media queries should be indented one level in.
+Example:
+
+ * @see https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/
+ * @see http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/
+ *
+ *     - Design for small views and then use media queries to scale up (mobile-
+ *       first). Functionally this usually means prefering mix-width to max-width.
+ *     - Use min-width over min-device-width to ensure the broadest experience.
+ *     - Consider whether you need a media query, or if you could instead use a
+ *       property like flexbox that is responsive by design.
+ *     - When defining your breakpoints, look for where your design breaks. Don’t
+ *       target devices.
+ *     - Prefer ems to pixels when defining your breakpoints.
+ *     - Watch spaces: include one in between rules and don't pad parentheses.
+ *
+ * I haven't provided all that many examples here, because they aren't really
+ * styleguide-related. But consider looking into the upcoming Media Queries
+ * Level 4 specification {@see https://www.w3.org/TR/mediaqueries-4/} as those
+ * will include non-breaking (for now) format changes.
+ */
+
+/* Incorrect: */
+@media ( min-width: 40em ) { /* Don't pad parentheses with spaces. */
+.selector-40 { /* Indent everything inside media query one tab. */
+    color: #fff;
+}
+}
+
+@media (min-width: 35em) and(max-width: 45em) { /* Needs space after `and`. */
+
+    /* Selectors */
+
+}
+
+/* Correct: */
+@media (min-width: 40em) {
+
+    .selector-40 {
+        color: #fff;
+    }
+
+}
+
+@media (min-width: 35em) and (max-width: 45em) {
+
+    /* Selectors */
+
+}
+
+@media (min-height: 20em) {
+
+    /* You can target minimum height as well. */
+
+}
