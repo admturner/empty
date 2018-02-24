@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A WordPress starter theme.",
   "bugs": "https://github.com/admturner/empty/issues",
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3.0+",
   "author": "Adam Turner (https://adamturner.org/)",
   "repository": {
     "type": "git",
