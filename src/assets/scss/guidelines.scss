@@ -46,7 +46,7 @@
 
 /* An inline comment describing .selector below. */
 .selector {
-    font-size: 16px; /* An inline comment explaining this declaration. */
+	font-size: 16px; /* An inline comment explaining this declaration. */
 }
 
 
@@ -70,23 +70,23 @@
 
 /* Correct */
 .tabs {
-    color: #000;
+	color: #000;
 
-    .more-tabs {
-        color: #fff;
-    }
+	.more-tabs {
+		color: #fff;
+	}
 
 }
 
 /* Incorrect */
 .tabs {
   color: #000;
-      color: #000;
-        color: #000;
+	  color: #000;
+		color: #000;
 
-        .more-tabs {
-          color: #fff;
-    }
+		.more-tabs {
+		  color: #fff;
+	}
 
 }
 
@@ -103,31 +103,31 @@
 .selector-1,
 .selector-2,
 .selector-3 {
-    background: #fff;
-    color: #000;
+	background: #fff;
+	color: #000;
 
-    .p,
-    .h6 {
-        font-size: 1em;
-        font-weight: bold;
-    }
+	.p,
+	.h6 {
+		font-size: 1em;
+		font-weight: bold;
+	}
 
 }
 
 .selector-1 {
-    background: #fff;
-    color: #000;
+	background: #fff;
+	color: #000;
 }
 
 /* Incorrect */
 .selector-1, .selector-2, .selector-3 {
-    background: #fff;
-    color: #000;
+	background: #fff;
+	color: #000;
 
-        .p, .h6 {
-            font-size: 1em; font-weight: bold;
-            }
-    }
+		.p, .h6 {
+			font-size: 1em; font-weight: bold;
+			}
+	}
 .selector-1 { background: #fff; color: #000; }
 
 
@@ -153,47 +153,47 @@
 
 /* Correct */
 .comment-form {
-    margin: 0;
+	margin: 0;
 }
 
 input[type="text"] {
-    line-height: 1.1;
+	line-height: 1.1;
 }
 
 /* Incorrect: */
 .commentForm,
 .Comment-Form,
 .comment_form {
-    margin: 0;
+	margin: 0;
 }
 
 /* Should use double quotation marks around value. */
 input[type=text] {
-    line-height: 1.5;
+	line-height: 1.5;
 }
 
 /* Avoid over-qualitification. */
 div.comment_form {
-    margin: 0;
+	margin: 0;
 }
 
 /* Avoid over-qualification via over-nested Sass as well. */
 /* This would resolve to: article section ul.names li a {} */
 article {
-    section {
-        ul.names {
-            li {
-                a {
-                    color: #f00;
-                }
-            }
-        }
-    }
+	section {
+		ul.names {
+			li {
+				a {
+					color: #f00;
+				}
+			}
+		}
+	}
 }
 
 /* What is a c1-xr? Prefer human readable class names. */
 #c1-xr {
-    margin: 0;
+	margin: 0;
 }
 
 
@@ -210,19 +210,19 @@ article {
 
 /* Correct: */
 .selector {
-    background: #fff;
-    color: #000;
-    margin: 0;
-    margin-left: 10px;
+	background: #fff;
+	color: #000;
+	margin: 0;
+	margin-left: 10px;
 }
 
 /* Incorrect: */
 .selector {
-    background:#fff;
-    COLOR: #000;
-    margin-left: 10px;
-    margin: 0; /* Overrides the prior `margin-left`. */
-    display: inline; /* Elements are inline by default unless overridden.
+	background:#fff;
+	COLOR: #000;
+	margin-left: 10px;
+	margin: 0; /* Overrides the prior `margin-left`. */
+	display: inline; /* Elements are inline by default unless overridden. */
 }
 
 /*
@@ -241,17 +241,17 @@ article {
 
 /* Example: */
 .modal {
-    display: block;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 40%;
-    background: #eee;
-    color: #ababab;
-    font-family: sans-serif;
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 40%;
+	background: #eee;
+	color: #ababab;
+	font-family: sans-serif;
 }
 
 /*
@@ -265,24 +265,24 @@ article {
 
 /* Example: */
 .css-fun {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -webkit-linear-gradient(top, white, black);
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+	background: -webkit-linear-gradient(top, white, black);
+	background: -o-linear-gradient(top, white, black);
+	background: linear-gradient(to bottom, white, black);
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
 }
 
 /* To get the above output using autoprefixer, all you'd write is: */
 .css-fun {
-    display: flex;
-    background: linear-gradient(to bottom, white, black);
-    transition: all .5s;
+	display: flex;
+	background: linear-gradient(to bottom, white, black);
+	transition: all .5s;
 }
 
 
@@ -315,59 +315,59 @@ article {
 
 /* Correct: */
 .selector-values {
-    content: "Content";
-    display: block;
-    margin: 0 0 1em 0;
-    background: #fff;
-    color: #000;
-    font-family: "Times New Roman", serif;
-    font-weight: 700;
-    line-height: 1.5;
+	content: "Content";
+	display: block;
+	margin: 0 0 1em 0;
+	background: #fff;
+	color: #000;
+	font-family: "Times New Roman", serif;
+	font-weight: 700;
+	line-height: 1.5;
 }
 
 .selector-values-2 {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.8);
+	background-color: #000;
+	color: rgba(255, 255, 255, 0.8);
 }
 
 /* Prefer shorthand when possible. */
 .use-shorthand {
-    margin-top: 1.5em 1em;
-    padding: 1em;
-    border: 1px solid #ccc;
+	margin-top: 1.5em 1em;
+	padding: 1em;
+	border: 1px solid #ccc;
 }
 
 /* Incorrect: */
 .selector-values {
-    content: 'Content'; /* Use double quotes. */
-    display:block /* Missing space and semicolon. */
-    margin: 0em 0em 1em 0em; /* 0 value shouldn't have units unless required. */
-    background: #ffffff; /* Shorten hex values when possible. */
-    color: BLACK; /* Use lowercase, and use hex codes for color. */
-    font-family: Times New Roman, serif; /* Quote font names when required. */
-    font-weight: bold; /* Font weights should be numeric. */
-    line-height: 1.5em; /* Line-height should be unitless. */
+	content: 'Content'; /* Use double quotes. */
+	display:block; /* Missing space. */
+	margin: 0em 0em 1em 0em; /* 0 value shouldn't have units unless required. */
+	background: #ffffff; /* Shorten hex values when possible. */
+	color: BLACK; /* Use lowercase, and use hex codes for color. */
+	font-family: Times New Roman, serif; /* Quote font names when required. */
+	font-weight: bold; /* Font weights should be numeric. */
+	line-height: 1.5em; /* Line-height should be unitless. */
 }
 
 /* Don't pad parentheses, do space values after commas. */
 .selector-values-2 {
-    background-color: rgb( 0,0,0 ); /* Prefer hex for opaque colors. */
-    color: rgba( 255,255,255,.8 ); /* Decimal values should have leading 0. */
+	background-color: rgb( 0,0,0 ); /* Prefer hex for opaque colors. */
+	color: rgba( 255,255,255,.8 ); /* Decimal values should have leading 0. */
 }
 
 /* Prefer shorthand when possible. */
 .use-shorthand {
-    margin-top: 1.5em;
-    margin-right: 1em;
-    margin-bottom: 1.5em;
-    margin-left: 1em;
-    padding-top: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-left: 1em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc;
+	margin-top: 1.5em;
+	margin-right: 1em;
+	margin-bottom: 1.5em;
+	margin-left: 1em;
+	padding-top: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ccc;
 }
 
 
@@ -404,33 +404,33 @@ Example:
 /* Incorrect: */
 @media ( min-width: 40em ) { /* Don't pad parentheses with spaces. */
 .selector-40 { /* Indent everything inside media query one tab. */
-    color: #fff;
+	color: #fff;
 }
 }
 
 @media (min-width: 35em) and(max-width: 45em) { /* Needs space after `and`. */
 
-    /* Selectors */
+	/* Selectors */
 
 }
 
 /* Correct: */
 @media (min-width: 40em) {
 
-    .selector-40 {
-        color: #fff;
-    }
+	.selector-40 {
+		color: #fff;
+	}
 
 }
 
 @media (min-width: 35em) and (max-width: 45em) {
 
-    /* Selectors */
+	/* Selectors */
 
 }
 
 @media (min-height: 20em) {
 
-    /* You can target minimum height as well. */
+	/* You can target minimum height as well. */
 
 }
