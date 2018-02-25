@@ -17,6 +17,12 @@ This document details all notable changes to the Empty WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.2.0 (unreleased)
+
+### Changed
+
+- Add .ylm extension to .stylelint for more directed syntax highlighting.
+
 ## 0.1.0 (2018-02-23)
 
 ### Added
