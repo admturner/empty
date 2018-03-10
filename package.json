@@ -1,9 +1,9 @@
 {
   "name": "empty",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A WordPress starter theme.",
   "bugs": "https://github.com/admturner/empty/issues",
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3.0+",
   "author": "Adam Turner (https://adamturner.org/)",
   "repository": {
     "type": "git",
@@ -11,15 +11,20 @@
   },
   "scripts": {
     "clean": "rimraf assets/{css/,images/,js/}",
-    "phpcs": "vendor/bin/phpcs -v --colors --extensions=php --ignore=\"*/vendor/*,*/node_modules/*\" --standard=phpcs.ruleset.xml *.php || true",
+    "phpcs": "vendor/bin/phpcs -v --colors --extensions=php --ignore=\"*/vendor/*,*/node_modules/*\" --standard=phpcs.ruleset.xml *.php includes/ template-parts/",
     "lintjs": "eslint src/assets/js/**",
     "uglify": "mkdirp assets/js && uglifyjs src/assets/js/*.js -o assets/js/custom.js -m --source-map && uglifyjs src/assets/js/*.js -o assets/js/custom.min.js -m -c",
     "lintscss": "stylelint \"src/assets/scss/**/*.scss\"",
     "sass": "node-sass --output-style expanded src/assets/scss -o assets/css",
     "postsass": "postcss assets/css/style.css -u autoprefixer -o ./style.css && postcss assets/css/*.css --map --use autoprefixer --use cssnano --replace",
+    "svgo": "mkdirp assets/images && svgo -f src/assets/images -o assets/images",
     "build:css": "npm run lintscss -s && npm run sass -s",
     "build:js": "npm run lintjs -s && npm run uglify -s",
-    "test": ""
+    "build:images": "npm run svgo -s && cpx \"src/assets/images/*.{png,jpg,gif}\" assets/images/ --update",
+    "test": "npm run phpcs -s && npm run lintjs -s && npm run lintscss -s",
+    "test:styleguide": "eslint style-guide/js/** || true && stylelint \"style-guide/scss/**/*.scss\" || true",
+    "prebuild": "npm run clean && npm run phpcs",
+    "build": "npm run build:css && npm run build:js && npm run build:images"
   },
   "browserslist": [
     "> 1%",
@@ -30,13 +35,14 @@
     "rimraf": "^2.6.2",
     "mkdirp": "^0.5.1",
     "cpx": "^1.5.0",
-    "autoprefixer": "^7.1.2",
-    "stylelint": "^8.0.0",
+    "autoprefixer": "^8.1.0",
+    "stylelint": "^9.1.1",
     "node-sass": "^4.7.2",
     "postcss-cli": "^5.0.0",
     "cssnano": "^3.10.0",
-    "eslint": "^4.17.0",
+    "eslint": "^4.18.0",
     "eslint-config-wordpress": "^2.0.0",
-    "uglify-js": "^3.3.10"
+    "uglify-js": "^3.3.13",
+    "svgo": "^1.0.5"
   }
 }
