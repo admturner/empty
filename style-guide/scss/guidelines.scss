@@ -35,7 +35,7 @@
  *     - Block comments should have newlines before and after.
  *     - Use inline comments to explain selectors and rules.
  *     - Inline comments shouldn't have empty newlines separating it from what
- *     it describes.
+ *       it describes.
  */
 
 /**
@@ -174,16 +174,23 @@ input[type=text] {
 }
 
 /* Avoid over-qualitification. */
-div.comment_form {
+div.comment-form.modal {
 	margin: 0;
 }
 
-/* Avoid over-qualification via over-nested Sass as well. */
-/* This would resolve to: article section ul.names li a {} */
+/*
+ * Avoid over-qualification via over-nested Sass as well. This would resolve to:
+ * article.section ul.names li a {}
+ */
+
 article {
-	section {
+
+	&.section {
+
 		ul.names {
+
 			li {
+
 				a {
 					color: #f00;
 				}
@@ -270,20 +277,20 @@ article {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-	background: -webkit-linear-gradient(top, white, black);
-	background: -o-linear-gradient(top, white, black);
-	background: linear-gradient(to bottom, white, black);
-	-webkit-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#000));
+	background: -webkit-linear-gradient(top, #fff, #000);
+	background: -o-linear-gradient(top, #fff, #000);
+	background: linear-gradient(to bottom, #fff, #000);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 /* To get the above output using autoprefixer, all you'd write is: */
 .css-fun {
 	display: flex;
-	background: linear-gradient(to bottom, white, black);
-	transition: all .5s;
+	background: linear-gradient(to bottom, #fff, #000);
+	transition: all 0.5s;
 }
 
 
@@ -318,7 +325,7 @@ article {
 .selector-values {
 	content: "Content";
 	display: block;
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 	background: #fff;
 	color: #000;
 	font-family: "Times New Roman", serif;
@@ -375,24 +382,21 @@ article {
 /*
  * 6.0 Media Queries
  *
- * Media Queries #Media Queries
-Media queries allow us to gracefully degrade the DOM for different screen sizes. If you are adding any, be sure to test above and below the break-point you are targeting.
-
-It is generally advisable to keep media queries grouped by media at the bottom of the stylesheet.
-An exception is made for the wp-admin.css file in core, as it is very large and each section essentially represents a stylesheet of its own. Media queries are therefore added at the bottom of sections as applicable.
-Rule sets for media queries should be indented one level in.
-Example:
-
+ * Generally it's recommended to group media queries by media at the end of your
+ * stylesheet, to guarantee they overwrite prior declarations as necessary. Rule
+ * sets for media queries should be indented one level in.
+ *
+ * For some discussion of these and other recommendations:
  * @see https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/
  * @see http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/
  *
- *     - Design for small views and then use media queries to scale up (mobile-
- *       first). Functionally this usually means prefering mix-width to max-width.
- *     - Use min-width over min-device-width to ensure the broadest experience.
  *     - Consider whether you need a media query, or if you could instead use a
  *       property like flexbox that is responsive by design.
- *     - When defining your breakpoints, look for where your design breaks. Don’t
- *       target devices.
+ *     - Design for small views and then use media queries to scale up only as
+ *       needed. This usually means prefering mix-width to max-width.
+ *     - Use min-width over min-device-width to ensure the broadest experience.
+ *     - When defining your breakpoints, look for where your design breaks. Do
+ *       not try to target devices.
  *     - Prefer ems to pixels when defining your breakpoints.
  *     - Watch spaces: include one in between rules and don't pad parentheses.
  *
