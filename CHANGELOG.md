@@ -17,11 +17,26 @@ This document details all notable changes to the Empty WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
-## 0.2.0 (unreleased)
+## 0.2.0 (2018-03-09)
 
 ### Changed
 
+- Move `guidelines.js` to the `style-guide/` directory for use as a reference and testing resource.
+- Change phpcs npm script so that it checks the `includes/` and `template-parts/` directories.
+- Change phpcs npm script so that it aborts the build process if it returns an error.
+- Move `guidelines.scss` to the `style-guide/` directory for use as a reference and testing resource.
+- Update stylelint to require `line-height` to be unitless.
+- Update stylelint to allow comments with URLs to exceed 80 charaters.
+- Update stylelint to prevent camelCase selectors in CSS.
+- Update npm dev dependency versions.
 - Add .ylm extension to .stylelint for more directed syntax highlighting.
+
+### Added
+
+- NPM script to test the lint config rules on the `guidelines.*` files in the style-guide directory.
+- NPM scripts to handle running complete test and build tasks.
+- NPM script to handle minifying and compressing svgs as well as copying images (to later minify them as well).
+- svgo npm dependency for SVG processing.
 
 ## 0.1.0 (2018-02-23)
 
