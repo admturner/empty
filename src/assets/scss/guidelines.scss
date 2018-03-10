@@ -109,7 +109,7 @@
 	.p,
 	.h6 {
 		font-size: 1em;
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 }
@@ -163,7 +163,8 @@ input[type="text"] {
 /* Incorrect: */
 .commentForm,
 .Comment-Form,
-.comment_form {
+.comment_form,
+#CommentForm {
 	margin: 0;
 }
 
