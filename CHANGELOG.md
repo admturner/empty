@@ -17,6 +17,12 @@ This document details all notable changes to the Empty WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
+## (unreleased)
+
+### Added
+
+- Preliminary customizer.js file.
+
 ## 0.2.0 (2018-03-09)
 
 ### Changed
