@@ -61,7 +61,7 @@
 
 		// Any ! negation operator should have a following space.
 		if ( !true ) {
-			console.log( '' );
+            console.log( '' );
 		}
 	}
 	fillerSpace();
