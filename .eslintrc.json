@@ -4,7 +4,7 @@
       "no-mixed-spaces-and-tabs": "error",
       "indent": ["error", "tab"],
       "max-len": ["warn", { "code": 100 }],
-      "space-in-parens": ["error", "always", { "exceptions": ["empty"]}],
+      "space-in-parens": ["error", "always", { "exceptions": ["bream"]}],
       "semi-spacing": ["error", {"before": false, "after": true}],
       "semi-style": ["error", "last"],
       "no-bitwise": "error",

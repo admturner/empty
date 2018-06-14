@@ -23,8 +23,8 @@ Disallow: /xmlrpc.php
 Disallow: /feed/
 Allow: /wp-content/uploads/
 Allow: /wp-includes/js/
-Allow: /wp-content/themes/empty/*.css$
-Allow: /wp-content/themes/empty/assets/css/
-Allow: /wp-content/themes/empty/assets/js/
-Allow: /wp-content/themes/empty/assets/images/
+Allow: /wp-content/themes/bream/*.css$
+Allow: /wp-content/themes/bream/assets/css/
+Allow: /wp-content/themes/bream/assets/js/
+Allow: /wp-content/themes/bream/assets/images/
 Sitemap: {Full url page to your sitemap XML}

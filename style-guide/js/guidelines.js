@@ -56,7 +56,7 @@
 	prop = object['default'];
 	firstArrayElement = arr[0];
 
-	// No filler spaces in empty constructs (e.g., {}, [], fn()).
+	// No filler spaces in bream constructs (e.g., {}, [], fn()).
 	function fillerSpace(  ) {
 
 		// Any ! negation operator should have a following space.

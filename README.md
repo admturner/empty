@@ -1,6 +1,6 @@
-# Empty
+# Bream
 
-A WordPress starter theme. It's more-or-less empty. It has a bunch of testing files and configurations ready for you to make your own.
+A WordPress starter theme. It's more-or-less bream. It has a bunch of testing files and configurations ready for you to make your own.
 
 ## For Developers
 
@@ -32,7 +32,7 @@ npm run lintjs
 
 ### License
 
-**Empty** is copyright 2017 Adam Turner [https://adamturner.org/](https://adamturner.org/) under a GNU General Public License version 3 or later.
+**Bream** is copyright 2017 Adam Turner [https://adamturner.org/](https://adamturner.org/) under a GNU General Public License version 3 or later.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later version.

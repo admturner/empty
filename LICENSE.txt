@@ -1,4 +1,4 @@
-Empty - A WordPress Starter Theme
+Bream - A WordPress Starter Theme
 
 Copyright 2017 Adam Turner <https://adamturner.org/>
 

@@ -1,9 +1,9 @@
-# Changelog: Empty - A WordPress Starter Theme
+# Changelog: Bream - A WordPress Starter Theme
 
 Author: Adam Turner
-URI: https://github.com/admturner/empty/
+URI: https://github.com/admturner/bream/
 
-This document details all notable changes to the Empty WordPress theme. It uses [Semantic Versioning](http://semver.org/).
+This document details all notable changes to the Bream WordPress theme. It uses [Semantic Versioning](http://semver.org/).
 
 <!--
 ## Major.MinorAddorDeprec.Bugfix (YYYY-MM-DD)

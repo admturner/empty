@@ -1,13 +1,13 @@
 {
-  "name": "empty",
+  "name": "bream",
   "version": "0.2.0",
   "description": "A WordPress starter theme.",
-  "bugs": "https://github.com/admturner/empty/issues",
+  "bugs": "https://github.com/admturner/bream/issues",
   "license": "GPL-3.0+",
   "author": "Adam Turner (https://adamturner.org/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/admturner/empty"
+    "url": "https://github.com/admturner/bream"
   },
   "scripts": {
     "clean": "rimraf assets/{css/,images/,js/}",
