@@ -2,6 +2,8 @@
 
 A WordPress starter theme. It's more-or-less bream. It has a bunch of testing files and configurations ready for you to make your own.
 
+![Bream logo of a pink fish filled with the text: Bream.](assets/images/bream.svg)
+
 ## For Developers
 
 @todo Explain the directory structure, build process, and build and testing tools.
