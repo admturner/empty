@@ -1,6 +1,8 @@
 # Bream
 
-![Bream.](favicon.png) A WordPress starter theme. It's more-or-less empty. It has a bunch of testing files and configurations ready for you to make your own.
+<img src="/assets/images/bream.svg" alt="Bream logo of a pink fish spelled with the word Bream." width="100" height="100" style="float:right;">
+
+A WordPress starter theme. It's more-or-less empty. It has a bunch of testing files and configurations ready for you to make your own.
 
 ## For Developers
 
