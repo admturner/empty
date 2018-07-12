@@ -17,6 +17,12 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.3.2 (2018-07-12)
+
+### Fixed
+
+- Switch from global variable to getter method for Bream theme version to fix #3.
+
 ## 0.3.1 (2018-07-12)
 
 ### Fixed
