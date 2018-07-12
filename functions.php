@@ -14,11 +14,17 @@
  */
 
 /**
- * Tracks the Bream Theme version.
+ * Retrieves the Bream Theme version.
  *
- * @since 0.3.0
+ * @since 0.3.2
+ *
+ * @return string The version number in semver format.
  */
-$bream_theme_version = '0.3.0';
+function get_bream_version() {
+	$bream_theme_version = '0.3.2';
+
+	return $bream_theme_version;
+}
 
 /**
  * Sets up Bream theme configuration and settings.
@@ -86,7 +92,7 @@ if ( ! function_exists( 'bream_styles_and_scripts' ) ) :
 		wp_enqueue_style( 'bream-fonts', bream_fonts_url(), array(), null );
 
 		// Add theme stylesheet.
-		wp_enqueue_style( 'bream-style', get_stylesheet_uri(), array(), $bream_theme_version );
+		wp_enqueue_style( 'bream-style', get_stylesheet_uri(), array(), get_bream_version() );
 	}
 endif;
 
