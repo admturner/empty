@@ -35,15 +35,6 @@ setup_bream_theme();
 add_action( 'wp_enqueue_scripts', 'bream_styles_and_scripts' );
 add_action( 'wp_head', 'bream_noscript_styles' );
 
-if ( ! function_exists( 'get_bream_version' ) ) :
-	/**
-	 * Retrieves the Bream theme version.
-	 *
-	 * @since 0.3.0
-	 */
-	
-endif;
-
 if ( ! function_exists( 'bream_fonts_url' ) ) :
 	/**
 	 * Builds the custom fonts path.

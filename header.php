@@ -46,7 +46,7 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bream' ); ?></button>
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'site-nav'
+				'theme_location' => 'site-nav',
 			) );
 			?>
 		</nav><!-- #site-navigation -->
