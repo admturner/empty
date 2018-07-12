@@ -1,5 +1,5 @@
 "rules": {
-    "at-rule-bream-line-before": [ "always", {
+    "at-rule-empty-line-before": [ "always", {
       except: ["blockless-after-blockless"],
       ignore: ["after-comment"],
     } ],
@@ -15,7 +15,7 @@
     "color-hex-length": "short",
     "color-named": "never",
     "color-no-invalid-hex": true,
-    "comment-bream-line-before": [ "always", {
+    "comment-empty-line-before": [ "always", {
       ignore: ["stylelint-commands"],
     } ],
     "declaration-bang-space-after": "never",
@@ -36,7 +36,7 @@
     "function-comma-space-after": "always",
     "function-comma-space-before": "never",
     "function-linear-gradient-no-nonstandard-direction": true,
-    "function-max-bream-lines": 1,
+    "function-max-empty-lines": 1,
     "function-name-case": "lower",
     "function-parentheses-space-inside": "never",
     "function-url-quotes": "never",
@@ -47,7 +47,7 @@
     "declaration-property-unit-whitelist": [
       "line-height": [],
     ],
-    "max-bream-lines": 2,
+    "max-empty-lines": 2,
     "max-line-length": [ 80, {
       "ignore": "non-comments",
       "ignorePattern": "/https?:\/\/[0-9,a-z]*.*/"
@@ -67,7 +67,7 @@
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
-    "rule-bream-line-before": [ "always", {
+    "rule-empty-line-before": [ "always", {
       except: ["after-single-line-comment"]
     } ],
     "selector-attribute-brackets-space-inside": "never",
@@ -90,7 +90,7 @@
     "selector-combinator-space-before": "always",
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-space-before": "never",
-    "selector-max-bream-lines": 0,
+    "selector-max-empty-lines": 0,
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-class-parentheses-space-inside": "never",

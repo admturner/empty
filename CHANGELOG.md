@@ -17,10 +17,21 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
-## 0.3.0 (unreleased)
+## 0.3.1 (2018-07-12)
+
+### Fixed
+
+- Overzealous find-and-replace changed "empty" to "bream" in lint configs. Oops.
+
+### Changed
+
+- Move theme setup methods to a dedicated class.
+- Organizing baseline Sass files.
+- Trim base functions file to bare necessities.
 
 ### Added
 
+- Default global views with `header.php`, `index.php`, and `footer.php`.
 - Image directories with Bream logo assets.
 - Preliminary customizer.js file.
 
