@@ -17,6 +17,12 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
+## 0.4.0 (unreleased)
+
+### Added
+
+- Languages directory for i18n files.
+
 ## 0.3.2 (2018-07-12)
 
 ### Fixed
