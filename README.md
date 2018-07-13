@@ -38,10 +38,10 @@ Place your theme language files in the `languages/` directory. You'll find the b
 
 Please refer to the following resources to learn more about translating WordPress themes:
 
-* https://codex.wordpress.org/I18n_for_WordPress_Developers
-* https://make.wordpress.org/polyglots/teams/
-* https://developer.wordpress.org/themes/functionality/localization/
-* https://developer.wordpress.org/reference/functions/load_theme_textdomain/
+* [WP Codex: I18n for WordPress Developers](https://codex.wordpress.org/I18n_for_WordPress_Developers)
+* [WP Translators Team home](https://make.wordpress.org/polyglots/teams/)
+* [WP Theme Handbook: Localization](https://developer.wordpress.org/themes/functionality/localization/)
+* [WP Code Reference: `load_theme_textdomain()`](https://developer.wordpress.org/reference/functions/load_theme_textdomain/)
 
 If using VVV for development, you already have the WordPress i18n tools installed in the WordPress development version (likely installed at `{vvv root}/www/wordpress-develop/`). These tools include a php script (called `makepot.php`) that'll use the `xgettext` utility to generate a `.pot` file for your theme.
 
