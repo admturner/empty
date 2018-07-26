@@ -21,6 +21,7 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 
 ### Added
 
+- 118n instructions to README.md file.
 - Languages directory for i18n files.
 
 ## 0.3.2 (2018-07-12)
