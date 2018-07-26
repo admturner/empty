@@ -1,0 +1,64 @@
+# Copyright (C) 2018 Adam Turner
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Bream 0.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bream\n"
+"POT-Creation-Date: 2018-07-13 01:07:55+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. translators: 1: Theme URL, 2: THeme name, 3: CMS name.
+#: footer.php:15
+msgid "<a href=\"%1$s\">%2$s</a> theme, built on <a href=\"%3$s\">%4$s</a>"
+msgstr ""
+
+#. #-#-#-#-#  bream.pot (Bream 0.3.2)  #-#-#-#-#
+#. Theme URI of the plugin/theme
+#: footer.php:16
+msgid "https://github.com/admturner/bream"
+msgstr ""
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. Translators: If there are characters in your language that are not supported
+#. by IBM Plex Sans, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:65
+msgctxt "IBM Plex Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:46
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/class-bream-setup.php:190
+msgid "Primary"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Bream"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A more-or-less empty WordPress starter theme. It has a bunch of"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Adam Turner"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://adamturner.org/"
+msgstr ""

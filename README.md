@@ -32,6 +32,23 @@ npm run lintscss
 npm run lintjs
 ~~~
 
+### Internationalization
+
+Place your theme language files in the `languages/` directory. You'll find the base `.pot` file there.
+
+Please refer to the following resources to learn more about translating WordPress themes:
+
+* [WP Codex: I18n for WordPress Developers](https://codex.wordpress.org/I18n_for_WordPress_Developers)
+* [WP Translators Team home](https://make.wordpress.org/polyglots/teams/)
+* [WP Theme Handbook: Localization](https://developer.wordpress.org/themes/functionality/localization/)
+* [WP Code Reference: `load_theme_textdomain()`](https://developer.wordpress.org/reference/functions/load_theme_textdomain/)
+
+If using VVV for development, you already have the WordPress i18n tools installed in the WordPress development version (likely installed at `{vvv root}/www/wordpress-develop/`). These tools include a php script (called `makepot.php`) that'll use the `xgettext` utility to generate a `.pot` file for your theme.
+
+1. In a terminal navigate to `/www/wordpress-develop/public_html/tools/i18n`
+2. Generate a .pot file for your theme with the command: `php makepot.php wp-theme ../../src/wp-content/themes/bream`
+3. Move the `.pot` file into the theme languages directory manually or with `mv bream.pot ../../src/wp-content/themes/bream/languages/`
+
 ### License
 
 **Bream** is copyright 2017 Adam Turner [https://adamturner.org/](https://adamturner.org/) under a GNU General Public License version 3 or later.
