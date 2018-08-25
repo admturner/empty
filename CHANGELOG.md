@@ -29,6 +29,7 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 
 ### Changed
 
+- Docs: Use compressed Sass output (set in `_config`).
 - Docs: Remove Minima theme from config file.
 
 ## 0.3.2 (2018-07-12)

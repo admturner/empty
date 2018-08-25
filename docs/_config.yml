@@ -30,6 +30,8 @@ show_dir_listing: false
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+sass:
+  style: compressed
 
 # Collections
 collections:
