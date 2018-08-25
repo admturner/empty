@@ -1,0 +1,28 @@
+# Styles
+#
+# Define all of your styles here. Notice these are separated by UI and Pattern
+# Library styles. The UI styles are for the style guide site itself, and the
+# Pattern Library styles are for the site you are documenting. The UI style(s)
+# are called by `_includes/head.html`.
+#
+# The Pattern Library styles are called by `_includes/pattern-styles.html` and
+# printed with the `_layouts/pattern.html` layout. Note that the pattern styles
+# are further subdivided by "development" and "production" to allow for pointing
+# to separate stylesheets.
+styles:
+  - group: ui
+    sheets:
+      - name: Main UI CSS
+        url: /assets/css/main.css
+      - name: IBM Plex Sans
+        url: https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i|IBM+Plex+Sans:400,400i,700,700i
+  - group: pattern-library
+    sheets:
+      - name: Empty WordPress Theme CSS
+        url: https://adamturner.org/wp-content/themes/grammatizator_act/library/css/style.css
+        type: text/css
+        media: all
+      - name: Open Sans CSS
+        url: https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i
+        type: text/css
+        media: all

@@ -1,0 +1,261 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Reset HTML5 elements to blocks.
+ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/**
+ * Foundation
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+/**
+ * Lists
+ */
+main {
+    ul,
+    ol {
+        font-size: 1.3rem;
+        margin-left: $spacing-unit;
+    }
+
+    li {
+        > ul,
+        > ol {
+            margin-bottom: 0;
+        }
+    }
+
+    .task-list {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+    .task-list-item {
+        display: flex;
+        margin: 0 0 1rem 2rem;
+    }
+
+    .task-list-item-checkbox {
+        opacity: 0;
+
+        & + label {
+            cursor: pointer;
+        }
+
+        & + label:before {
+            background: $dt-gray-light;
+            border: 2px solid $dt-gray;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin: 0 1rem 0 -2.5rem;
+            vertical-align: text-bottom;
+            width: 20px;
+        }
+
+        &:hover + label:before {
+            background: $dt-pink;
+        }
+
+        &:focus + label:before {
+            background: $dt-gray;
+        }
+
+        &:checked + label:before {
+            background: $dt-green;
+        }
+
+        &:disabled + label:before {
+            background: $dt-red;
+        }
+    }
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h2 {
+    color: #282a36;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/**
+ * Links
+ */
+a {
+    color: $nav-color;
+
+    &:hover,
+    &:focus {
+        color: $text-color;
+    }
+
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    @include relative-font-size(1.125);
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Buttons
+ */
+%button {
+    background: transparent center center no-repeat;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+        background: lighten($grey-color-light, 5%);
+    }
+
+}
+
+button,
+.button {
+    @extend %button;
+
+    main & {
+        background: $dt-gray-dark;
+        border-radius: 4px;
+        box-shadow: 1px 1px 3px 1px rgba(20, 20, 20, 0.3);
+        color: $dt-gray-light;
+        font-size: 1rem;
+        margin: .5em;
+        min-width: fit-content;
+        padding: .75em 1em;
+
+        &:hover,
+        &:focus {
+            background: $dt-purple;
+            box-shadow: 1px 1px 5px 2px rgba(20, 20, 20, 0.3);
+            color: $text-color;
+        }
+    }
+}
+
+.button-secondary {
+
+    main & {
+        background: #fff;
+        border: 1px solid $dt-gray-dark;
+        color: $text-color;
+    }
+}
+
+/**
+ * Icons
+ */
+.svg-icon {
+    display: inline-block;
+    fill: #{$grey-color};
+    height: 16px;
+    padding-right: 5px;
+    vertical-align: text-top;
+    width: 16px;
+}
+
+.social-media-list {
+
+    li + li {
+        padding-top: 5px;
+    }
+
+}
+
+/**
+ * Tables
+ */
+table {
+    margin-bottom: $spacing-unit;
+    width: 100%;
+    text-align: $table-text-align;
+    color: lighten($text-color, 18%);
+    border-collapse: collapse;
+    border: 1px solid $grey-color-light;
+
+    tr {
+
+        &:nth-child(even) {
+            background-color: lighten($grey-color-light, 6%);
+        }
+
+    }
+
+    th, td {
+        padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+
+    th {
+        background-color: lighten($grey-color-light, 3%);
+        border: 1px solid darken($grey-color-light, 4%);
+        border-bottom-color: darken($grey-color-light, 12%);
+    }
+
+    td {
+        border: 1px solid $grey-color-light;
+    }
+
+}
