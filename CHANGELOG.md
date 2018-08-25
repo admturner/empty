@@ -27,6 +27,10 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 - 118n instructions to README.md file.
 - Languages directory for i18n files.
 
+### Changed
+
+- Docs: Remove Minima theme from config file.
+
 ## 0.3.2 (2018-07-12)
 
 ### Fixed
