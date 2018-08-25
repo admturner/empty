@@ -1,0 +1,25 @@
+<button class="section-nav-toggle" role="tab" aria-expanded="false" title="Style Guide Navigation Menu">
+    <svg aria-hidden="true" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.618 22.746L18.382 12 5.618 1.254z"/></svg>
+</button>
+<nav id="section-nav-menu" class="section-nav">
+    <p class="heading">{{ site.title }}</p>
+    <ul>
+        {%- assign groups = site.styleguide | group_by: 'category' | sort: 'name' -%}
+        {%- for group in groups -%}
+            {%- if '' != group.name -%}
+                <li class="nav-item nav-section-title {% if group.name == page.category %}current{% endif %}" tabindex="0">
+                    {%- assign items = group.items | sort: 'order' -%}
+                    <span class="expandable">
+                        <svg aria-hidden="true" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+                        {{ group.name }}
+                    </span>
+                    <ul>
+                        {%- for item in items -%}
+                            <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</nav>

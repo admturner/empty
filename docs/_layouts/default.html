@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head.html -%}
+
+    <body>
+
+        <div class="header-decor">
+            {%- include header.html -%}
+        </div>
+
+        {%- for item in site.patterns -%}
+            {%- if item.id == page.id -%}
+                {%- include nav-pattern-library.html -%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        {%- for item in site.styleguide -%}
+            {%- if item.id == page.id -%}
+                {%- include nav-style-guide.html -%}
+            {%- endif -%}
+        {%- endfor -%}
+
+        <main class="page-content" aria-label="Content">
+
+            {{ content }}
+
+        </main>
+
+        {%- include footer.html -%}
+
+        {%- include foot.html -%}
+
+    </body>
+</html>

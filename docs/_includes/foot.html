@@ -1,0 +1,6 @@
+<script type="text/javascript" src="{{ "/assets/js/script.min.js" | relative_url }}"></script>
+{%- for item in site.patterns -%}
+    {%- if item.id == page.id -%}
+        <script type="text/javascript" src="{{ "/assets/js/pattern.min.js" | relative_url }}"></script>
+    {%- endif -%}
+{%- endfor -%}
