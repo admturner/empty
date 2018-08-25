@@ -21,6 +21,8 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 
 ### Added
 
+- Basic Gemfile and configuration file for Jekyll-based documentation section.
+- A `docs/` directory to serve documentation using [Jekyll and GitHub Pages](https://jekyllrb.com/docs/github-pages/).
 - 118n instructions to README.md file.
 - Languages directory for i18n files.
 
