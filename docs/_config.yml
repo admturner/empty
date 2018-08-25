@@ -8,7 +8,7 @@
 title: Bream Docs
 email: support@adamturner.org
 description: Documentation and style guide for a WordPress theme.
-baseurl: ""
+baseurl: "/bream"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: admturner
 github_repository_url: https://github.com/admturner/bream
