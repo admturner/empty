@@ -1,3 +1,13 @@
 {
-	"extends": "@wordpress/npm-package-json-lint-config"
+	"extends": "@wordpress/npm-package-json-lint-config",
+	"rules": {
+		"description-format": [
+			"error",
+			{
+				"requireCapitalFirstLetter": true,
+				"requireEndingPeriod": true
+			}
+		],
+		"valid-values-license": "off"
+	}
 }
