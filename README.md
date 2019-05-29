@@ -1,8 +1,20 @@
-# Bream
+# Bream Starter Theme
 
-<img src="/assets/images/bream.svg" alt="Bream logo of a pink fish spelled with the word Bream." width="100" height="100" style="float:right;">
+[![Build Status](https://travis-ci.org/admturner/bream.svg?branch=master)](https://travis-ci.org/admturner/bream)
+
+**Contributors:** Adam Turner  
+**Requires at least:** WordPress 4.7  
+**Tested up to:** WordPress 5.2  
+**Requires PHP:** 5.6  
+**Version:** 0.4.0-alpha.01  
+**License:** GPLv3 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
+
+## Description
 
 A WordPress starter theme. It's more-or-less empty. It has a bunch of testing files and configurations ready for you to make your own.
+
+## Installation & Dependencies
 
 ## For Developers
 
@@ -51,7 +63,7 @@ If using VVV for development, you already have the WordPress i18n tools installe
 
 ### License
 
-**Bream** is copyright 2017 Adam Turner [https://adamturner.org/](https://adamturner.org/) under a GNU General Public License version 3 or later.
+**Bream** is copyright 2019 Adam Turner [https://adamturner.org/](https://adamturner.org/) under a GNU General Public License version 3 or later.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later version.
