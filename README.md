@@ -1,6 +1,6 @@
 # Bream Starter Theme
 
-[![Build Status](https://travis-ci.org/admturner/bream?branch=master)](https://travis-ci.org/admturner/bream)
+[![Build Status](https://travis-ci.org/admturner/bream.svg?branch=master)](https://travis-ci.org/admturner/bream)
 
 **Contributors:** Adam Turner  
 **Requires at least:** WordPress 4.7  
@@ -9,8 +9,6 @@
 **Version:** 0.4.0-alpha.01  
 **License:** GPLv3 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
-
-<img src="/assets/images/bream.svg" alt="Bream logo of a pink fish spelled with the word Bream." width="100" height="100" style="float:right;">
 
 ## Description
 
