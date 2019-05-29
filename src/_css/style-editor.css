@@ -6,15 +6,15 @@
 
 /* Main column width */
 .wp-block {
-    max-width: 720px;
+	max-width: 720px;
 }
 
 /* Width of "wide" blocks */
 .wp-block[data-align="wide"] {
-    max-width: 1080px;
+	max-width: 1080px;
 }
 
 /* Width of "full-wide" blocks */
 .wp-block[data-align="full"] {
-    max-width: none;
+	max-width: none;
 }
