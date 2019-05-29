@@ -1,4 +1,0 @@
-<li class="task-list-item">
-    <input id="task-list-item-{% increment var %}" type="checkbox" class="task-list-item-checkbox" {{ include.disabled }}>
-    <label for="task-list-item-{% increment var | minus: 1 %}">{{ include.label | markdownify | remove: "<p>" | remove: "</p>" }}</label>
-</li>
