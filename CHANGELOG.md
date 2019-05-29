@@ -17,7 +17,7 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
-## 0.4.0-alpha.01 (:construction: WIP 2019-05-29)
+## 0.4.0-alpha.02 (:construction: WIP 2019-05-29)
 
 ### Added
 
@@ -57,6 +57,7 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 
 - :boom: Remove theme setup class (disperse class methods among functions.php and helper files in `/includes`).
 - Old style guide JS and CSS guideline files.
+- :fire: Jekyll-based embedded docs site.
 
 ## 0.3.2 (2018-07-12)
 
