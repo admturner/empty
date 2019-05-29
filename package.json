@@ -1,48 +1,66 @@
 {
-  "name": "bream",
-  "version": "0.3.2",
-  "description": "A WordPress starter theme.",
-  "bugs": "https://github.com/admturner/bream/issues",
-  "license": "GPL-3.0+",
-  "author": "Adam Turner (https://adamturner.org/)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/admturner/bream"
-  },
-  "scripts": {
-    "clean": "rimraf assets/{css/,images/,js/}",
-    "phpcs": "vendor/bin/phpcs -v --colors --extensions=php --ignore=\"*/vendor/*,*/node_modules/*\" --standard=phpcs.ruleset.xml *.php includes/ template-parts/",
-    "lintjs": "eslint src/assets/js/**",
-    "uglify": "mkdirp assets/js && uglifyjs src/assets/js/*.js -o assets/js/custom.js -m --source-map && uglifyjs src/assets/js/*.js -o assets/js/custom.min.js -m -c",
-    "lintscss": "stylelint \"src/assets/scss/**/*.scss\"",
-    "sass": "node-sass --output-style expanded src/assets/scss -o assets/css",
-    "postsass": "postcss assets/css/style.css -u autoprefixer -o ./style.css && postcss assets/css/*.css --map --use autoprefixer --use cssnano --replace",
-    "svgo": "mkdirp assets/images && svgo -f src/assets/images -o assets/images",
-    "build:css": "npm run lintscss -s && npm run sass -s",
-    "build:js": "npm run lintjs -s && npm run uglify -s",
-    "build:images": "npm run svgo -s && cpx \"src/assets/images/*.{png,jpg,gif}\" assets/images/ --update",
-    "test": "npm run phpcs -s && npm run lintjs -s && npm run lintscss -s",
-    "test:styleguide": "eslint style-guide/js/** || true && stylelint \"style-guide/scss/**/*.scss\" || true",
-    "prebuild": "npm run clean && npm run phpcs",
-    "build": "npm run build:css && npm run build:js && npm run build:images"
-  },
-  "browserslist": [
+	"name": "bream",
+	"version": "0.4.0",
+	"private": true,
+	"description": "A WordPress starter theme.",
+	"author": "Adam Turner (https://adamturner.dev/)",
+	"license": "GPL-3.0-or-later",
+	"keywords": [
+		"wordpress",
+		"theme"
+	],
+	"homepage": "https://admturner.github.io/bream/",
+	"repository": "git+https://github.com/admturner/bream.git",
+	"bugs": {
+		"url": "https://github.com/admturner/bream/issues"
+	},
+	"browserslist": [
     "> 1%",
-    "ie 8-11",
-    "Firefox ESR"
+    "ie >= 11",
+    "last 1 Android versions",
+    "last 1 ChromeAndroid versions",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions"
   ],
-  "devDependencies": {
-    "rimraf": "^2.6.x",
-    "mkdirp": "^0.5.1",
-    "cpx": "^1.5.x",
-    "autoprefixer": "^8.1.x",
-    "stylelint": "^9.1.x",
-    "node-sass": "^4.7.x",
-    "postcss-cli": "^5.0.x",
-    "cssnano": "^3.10.x",
-    "eslint": "^4.18.x",
-    "eslint-config-wordpress": "^2.0.x",
-    "uglify-js": "^3.3.x",
-    "svgo": "^1.0.x"
-  }
+	"devDependencies": {
+		"@wordpress/babel-preset-default": "^4.1.0",
+		"@wordpress/eslint-plugin": "^2.1.0",
+		"@wordpress/jest-preset-default": "^4.0.0",
+		"@wordpress/npm-package-json-lint-config": "^1.2.0",
+		"babel-loader": "^8.0.5",
+		"cssnano": "^4.1.10",
+		"eslint": "^5.16.0",
+		"jest": "^24.7.1",
+		"jest-puppeteer": "^4.1.1",
+		"npm-package-json-lint": "^3.6.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^6.1.2",
+		"postcss-import": "^12.0.1",
+		"postcss-preset-env": "^6.6.0",
+		"puppeteer": "^1.15.0",
+		"resolve-bin": "^0.4.0",
+		"rimraf": "^2.6.3",
+		"source-map-loader": "^0.2.4",
+		"stylelint": "^10.0.1",
+		"stylelint-config-wordpress": "^14.0.0",
+		"thread-loader": "^2.1.2",
+		"webpack": "^4.30.0",
+		"webpack-bundle-analyzer": "^3.3.2",
+		"webpack-cli": "^3.3.1"
+	},
+	"scripts": {
+		"build": "NODE_ENV=production run-s clean test 'build:*'",
+		"build:scripts": "webpack",
+		"build:styles": "postcss 'src/_css/*.css' --dir 'build/css/'",
+		"clean": "rimraf build/",
+		"lint:scripts": "eslint '*.js' 'src/**/*.js'",
+		"lint:styles": "stylelint 'src/**/*.css'",
+		"lint:pkg": "npmPkgJsonLint .",
+		"lint:php": "composer lint-detail",
+		"start": "run-p 'build:*'",
+		"test": "run-p 'lint:*'"
+	}
 }
