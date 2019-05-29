@@ -28,7 +28,8 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			printf( '<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
+			printf(
+				'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
 				( is_front_page() ) ? 'h1' : 'p',
 				esc_url( home_url( '/' ) ),
 				esc_html( get_bloginfo( 'name' ) )
@@ -39,15 +40,12 @@
 				?>
 				<p class="site-description"><?php echo esc_html( $description ); ?></p>
 				<?php
-			endif; ?>
+			endif;
+			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bream' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'site-nav',
-			) );
-			?>
+			<?php wp_nav_menu( array( 'theme_location' => 'site-nav' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
