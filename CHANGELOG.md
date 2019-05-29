@@ -17,20 +17,46 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
-## 0.4.0 (unreleased)
+## 0.4.0-alpha.01 (:construction: WIP 2019-05-29)
 
 ### Added
 
+- Contribution guidelines and process in CONTRIBUTING.md.
+- Helper functions file at `includes/helper-functions.php` to handle internal helper methods.
+- Options file at `includes/options-functions.php` to handle getting and setting theme options.
+- Template functions file at `includes/template-functions.php` to handle functions that modify WordPress defaults using hooks.
+- :wrench: Webpack configuration file.
+- :wrench: PostCSS package configuration file.
+- :construction_worker: Add Travis CI configuration file.
+- NVM version file to pin version.
+- :wrench: Config file for the `npm-package-json-lint` package.
+- A `.gitattributes` file to ignore build tools when downloading the project as a zip archive.
 - Documentation site theme files and basic file structure.
 - Basic Gemfile and configuration file for Jekyll-based documentation section.
 - A `docs/` directory to serve documentation using [Jekyll and GitHub Pages](https://jekyllrb.com/docs/github-pages/).
-- 118n instructions to README.md file.
+- Head matter and 118n instructions to README.md file.
 - Languages directory for i18n files.
 
 ### Changed
 
+- :warning: Fix PHP and CSS lint issues.
+- :truck: Reorganize source CSS, JS, and image directories.
+- :recycle: Refactor functions.php to handle theme setup.
+- :wrench: Replace Sass- and Uglify-based build tools with postCSS- and Webpack-based build tools using WordPress babel, eslint, and jest configuration defaults. Refactor to meet npm-package-json-lint coding standards.
+- :heavy_plus_sign: :heavy_minus_sign: Replace 'squizlabs' php codesniffer with 'dealerdirect' dependency and upgrade wpcs coding standards dependency.
+- :wrench: Reformat Composer scripts to use phpcs.xml.dist config.
+- Simplify and update gitignore file for WP 5.0+ build changes.
+- :wrench: Update phpcs lint configuration and rules for WP 5.0+.
+- :wrench: Use `stylelint-config-wordpress` rules in place of fully manual stylelint rules.
+- :wrench: Use `@wordpress/eslint-plugin/recommended` rules in place of previous mixed eslint rules.
+- Standardize editorconfig file.
 - Docs: Use compressed Sass output (set in `_config`).
 - Docs: Remove Minima theme from config file.
+
+### Removed
+
+- :boom: Remove theme setup class (disperse class methods among functions.php and helper files in `/includes`).
+- Old style guide JS and CSS guideline files.
 
 ## 0.3.2 (2018-07-12)
 
