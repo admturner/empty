@@ -1,15 +1,14 @@
 <?php
 /**
- * The main template file
+ * The archive page template file
  *
- * This is the most generic template file in a WordPress theme. It displays any
- * page when no more-specific template matches a query.
+ * This template file displays aggregated lists of single posts.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package bream
  *
- * @since 0.3.0
+ * @since 0.4.0
  */
 
 get_header();
@@ -18,15 +17,16 @@ get_header();
 
 	<?php
 	if ( have_posts() ) {
+		?>
 
-		if ( is_home() && ! is_front_page() ) {
-			?>
-			<header class="page-header">
-				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-			</header>
+		<header class="page-header">
 			<?php
-		}
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="archive-description">', '</div>' );
+			?>
+		</header>
 
+		<?php
 		while ( have_posts() ) :
 			the_post();
 
