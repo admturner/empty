@@ -17,11 +17,15 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 ### Removed (for deprecated features removed in this release)
 -->
 
-## 0.4.0-alpha.02 (:construction: WIP 2019-05-29)
+## 0.4.0-alpha-4 (:construction: WIP 2019-06-26)
 
 ### Added
 
-- Contribution guidelines and process in CONTRIBUTING.md.
+- Template function to conditionally add body classes.
+- :sparkles: All of the base template files and template parts.
+- A footer widget area.
+- Contribution guidelines and process in CONTRIBUTING.md in a new `.github` directory.
+- Template tag functions file at `includes/template-tags.php` to handle custom template printing functions.
 - Helper functions file at `includes/helper-functions.php` to handle internal helper methods.
 - Options file at `includes/options-functions.php` to handle getting and setting theme options.
 - Template functions file at `includes/template-functions.php` to handle functions that modify WordPress defaults using hooks.
@@ -31,14 +35,13 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 - NVM version file to pin version.
 - :wrench: Config file for the `npm-package-json-lint` package.
 - A `.gitattributes` file to ignore build tools when downloading the project as a zip archive.
-- Documentation site theme files and basic file structure.
-- Basic Gemfile and configuration file for Jekyll-based documentation section.
-- A `docs/` directory to serve documentation using [Jekyll and GitHub Pages](https://jekyllrb.com/docs/github-pages/).
 - Head matter and 118n instructions to README.md file.
 - Languages directory for i18n files.
 
 ### Changed
 
+- Update footer site info.
+- Set main `./style.css` to an empty placeholder for theme metadata.
 - :warning: Fix PHP and CSS lint issues.
 - :truck: Reorganize source CSS, JS, and image directories.
 - :recycle: Refactor functions.php to handle theme setup.
@@ -50,14 +53,13 @@ This document details all notable changes to the Bream WordPress theme. It uses 
 - :wrench: Use `stylelint-config-wordpress` rules in place of fully manual stylelint rules.
 - :wrench: Use `@wordpress/eslint-plugin/recommended` rules in place of previous mixed eslint rules.
 - Standardize editorconfig file.
-- Docs: Use compressed Sass output (set in `_config`).
-- Docs: Remove Minima theme from config file.
 
 ### Removed
 
 - :boom: Remove theme setup class (disperse class methods among functions.php and helper files in `/includes`).
 - Old style guide JS and CSS guideline files.
 - :fire: Jekyll-based embedded docs site.
+- :fire: Remove robots.txt sample from the theme.
 
 ## 0.3.2 (2018-07-12)
 
