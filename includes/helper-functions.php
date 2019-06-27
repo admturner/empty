@@ -5,6 +5,7 @@
  * @package Bream
  * @since 0.4.0
  */
+
 namespace Bream\Includes\HelperFunctions;
 
 /**

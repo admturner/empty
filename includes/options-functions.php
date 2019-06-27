@@ -5,6 +5,7 @@
  * @package Bream
  * @since 0.4.0
  */
+
 namespace Bream\Includes\OptionsFunctions;
 
 /**
@@ -24,7 +25,7 @@ function populate_default_options( $options = array() ) {
 
 	foreach ( $options as $option => $value ) {
 		if ( false === get_option( $option ) ) {
-			add_option( $option, $value, true );
+			add_option( $option, $value );
 		}
 	}
 }
@@ -61,11 +62,11 @@ add_action( 'admin_init', __NAMESPACE__ . '\options_setup' );
 function media_options_small_callback() {
 	?>
 	<fieldset>
-		<legend class="screen-reader-text"><span><?php _e( 'Small size', 'bream' ); ?></span></legend>
-		<label for="small_size_w"><?php _e( 'Max Width', 'bream' ); ?></label>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Small size', 'bream' ); ?></span></legend>
+		<label for="small_size_w"><?php esc_html_e( 'Max Width', 'bream' ); ?></label>
 		<input name="small_size_w" type="number" step="1" min="0" id="small_size_w" value="<?php form_option( 'small_size_w' ); ?>" class="small-text" />
 		<br />
-		<label for="small_size_h"><?php _e( 'Max Height', 'bream' ); ?></label>
+		<label for="small_size_h"><?php esc_html_e( 'Max Height', 'bream' ); ?></label>
 		<input name="small_size_h" type="number" step="1" min="0" id="small_size_h" value="<?php form_option( 'small_size_h' ); ?>" class="small-text" />
 	</fieldset>
 	<?php
@@ -76,7 +77,7 @@ function media_options_small_callback() {
  *
  * @since 0.4.0
  *
- * @param array $sizes
+ * @param array $sizes The WordPress image sizes array.
  * @return array $sizes
  */
 function update_media_size_names_choose( $sizes ) {
