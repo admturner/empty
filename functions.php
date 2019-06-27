@@ -14,7 +14,9 @@
  * @package Bream
  * @since 0.1.0
  */
+
 namespace Bream\Functions;
+
 use Bream\Includes\HelperFunctions;
 
 if ( ! function_exists( 'bream_setup' ) ) :
@@ -223,8 +225,20 @@ add_action( 'wp_head', __NAMESPACE__ . '\bream_noscript_styles' );
 function widgets_init() {
 	register_sidebar(
 		array(
+			'name'          => __( 'Main Widgets', 'bream' ),
+			'id'            => 'sidebar-main',
+			'description'   => __( 'Widgets added here appear in the main content area.', 'bream' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name'          => __( 'Footer Widgets', 'bream' ),
-			'id'            => 'footer-sidebar',
+			'id'            => 'sidebar-footer',
 			'description'   => __( 'Widgets added here appear in the footer.', 'bream' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -249,3 +263,8 @@ require get_template_directory() . '/includes/options-functions.php';
  * Modify WordPress defaults using hooks.
  */
 require get_template_directory() . '/includes/template-functions.php';
+
+/**
+ * Custom template tags.
+ */
+require get_template_directory() . '/includes/template-tags.php';

@@ -6,16 +6,26 @@
  *
  * @since 0.3.0
  */
+
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<?php
+		if ( is_active_sidebar( 'sidebar-footer' ) ) {
+			?>
+			<aside id="secondary" class="widget-area">
+				<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+			</aside>
+			<?php
+		}
+		?>
 		<section class="site-info">
 			<?php
 			printf(
-				/* translators: 1: Theme URL, 2: THeme name, 3: CMS name. */
-				wp_kses_post( __( '<a href="%1$s">%2$s</a> theme, built on <a href="%3$s">%4$s</a>', 'bream' ) ),
-				esc_url( __( 'https://github.com/admturner/bream', 'bream' ) ),
+				'<a href="%1$s">%2$s</a> %3$s <a href="%4$s">%5$s</a>.',
+				esc_url( 'https://github.com/admturner/bream' ),
 				'Bream',
+				esc_html__( 'theme, built on', 'bream' ),
 				esc_url( __( 'https://wordpress.org/', 'bream' ) ),
 				'WordPress'
 			);
