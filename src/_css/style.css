@@ -1,16 +1,1 @@
-/*
-Theme Name: Bream
-Theme URI: https://github.com/admturner/bream
-Author: Adam Turner
-Author URI: https://adamturner.org/
-Description: A more-or-less empty WordPress starter theme. It has a bunch of
-testing files and configurations ready for you to make your own. Use it as a
-jumping off point for your own theme.
-Version: 0.4.0-alpha.02
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: bream
-*/
-
-@import "docs/notice.css";
 @import "environment/variables.css";
