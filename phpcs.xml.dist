@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Coding Standards">
-	<description>Apply WordPress Coding Standards to all Core files</description>
+	<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+	<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
+	<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki -->
+	<!-- See https://github.com/wimg/PHPCompatibility -->
 
-	<rule ref="WordPress-Core"/>
+	<description>Apply WordPress Coding Standards to all theme files.</description>
+
+	<rule ref="WordPress"/>
 	<rule ref="WordPress.CodeAnalysis.EmptyStatement"/>
 
 	<rule ref="WordPress.NamingConventions.ValidVariableName">
@@ -67,9 +72,10 @@
 	<!-- Check up to 20 files simultaneously. -->
 	<arg name="parallel" value="20"/>
 
-	<!-- Show sniff codes in all reports -->
+	<!-- Show sniff codes in all reports. -->
 	<arg value="ps"/>
 
+	<!-- Check all files in this directory and those below it. -->
 	<file>.</file>
 
 	<!-- Exclude the build folder in the current directory, as Travis puts the checkout in a build directory. -->
@@ -106,9 +112,14 @@
 		<exclude-pattern>/tests/phpunit/tests/multisite/site\.php</exclude-pattern>
 	</rule>
 
-	<!-- Whitelist the I18n functions file from issues identified by the I18n sniff
-		(such as calling the low-level translate() function). -->
 	<rule ref="WordPress.WP.I18n">
+		<!-- Verify that the text_domain is set to the desired text domain.
+	             Multiple valid text domains can be provided in a comma-delimited list. -->
+		<properties>
+			<property name="text_domain" type="array" value="bream"/>
+		</properties>
+		<!-- Whitelist the I18n functions file from issues identified by the I18n sniff
+			     (such as calling the low-level translate() function). -->
 		<exclude-pattern>/tests/phpunit/tests/l10n\.php</exclude-pattern>
 		<exclude-pattern>/tests/phpunit/tests/l10n/loadTextdomainJustInTime\.php</exclude-pattern>
 	</rule>
@@ -131,6 +142,11 @@
 			<property name="custom_test_class_whitelist" type="array" value="WP_UnitTestCase,WP_Ajax_UnitTestCase,WP_Canonical_UnitTestCase,WP_Test_REST_TestCase,WP_Test_REST_Controller_Testcase,WP_Test_REST_Post_Type_Controller_Testcase,WP_XMLRPC_UnitTestCase"/>
 		</properties>
 	</rule>
+
+	<!-- Set the minimum supported WP version. This is used by several sniffs.
+		 The minimum version set here should be in line with the minimum WP version
+		 as set in the "Requires at least" tag in the readme.txt file. -->
+	<config name="minimum_supported_wp_version" value="5.0"/>
 
 	<!-- Exclude the unit tests from select sniffs. -->
 	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
