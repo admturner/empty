@@ -2,7 +2,7 @@
  * External dependencies
  */
 const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
-const path = require( 'path' );
+const { resolve } = require( 'path' );
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
@@ -10,11 +10,11 @@ const mode = isProduction ? 'production' : 'development';
 const config = {
 	mode,
 	entry: {
-		index: path.resolve( process.cwd(), 'src/_js', 'index.js' ),
+		index: resolve( process.cwd(), 'src/', 'index.js' ),
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve( process.cwd(), 'build/js' ),
+		path: resolve( process.cwd(), 'build' ),
 	},
 	resolve: {
 		alias: {
