@@ -3,10 +3,10 @@
 [![Build Status](https://travis-ci.org/admturner/bream.svg?branch=master)](https://travis-ci.org/admturner/bream)
 
 **Contributors:** Adam Turner  
-**Requires at least:** WordPress 4.7  
-**Tested up to:** WordPress 5.2  
+**Requires at least:** WordPress 5.0  
+**Tested up to:** WordPress 5.2.2  
 **Requires PHP:** 5.6  
-**Version:** 0.4.0-alpha.02  
+**Version:** 0.4.0-alpha-4  
 **License:** GPLv3 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 
